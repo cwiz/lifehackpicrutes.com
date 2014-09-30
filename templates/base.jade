@@ -1,0 +1,83 @@
+doctype 5
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport",     			content="width=device-width, initial-scale=1.0")
+		meta(name="description",  			content="")
+		meta(name="author",       			content="Oxana Khazhieva")
+		meta(name='yandex-verification', 	content='6ce2e810488102c9')
+		
+		link(href="/static/css/bootstrap.css",    rel="stylesheet")
+		link(href="/static/css/bootstrap-responsive.css", rel="stylesheet")
+		link(href="/static/css/main.css",                 rel="stylesheet")
+
+		link(href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,300,700,800&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+
+		title 
+			block title
+			| Lifehack Pictures
+
+		script(type="text/javascript")
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-35733772-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+	body
+		div(class="navbar navbar-static-top", id="navbar")
+			div(class="navbar-inner")
+				div(class="container")
+					a(class="brand", href="/") Lifehack Pictures
+
+					ul.nav
+						li.links
+							a(href='/categories/') Категории
+						li.links
+							a(href='/new/') Новое
+					div
+						div(class="ya-site-form ya-site-form_inited_no", 
+							onclick="return {'bg': 'transparent', 'target': '_self', 'language': 'ru', 'suggest': true, 'tld': 'ru', 'site_suggest': true, 'action': 'http://lifehackpictures.com/search', 'webopt': false, 'fontsize': 16, 'arrow': false, 'fg': '#000000', 'searchid': '1964789', 'logo': 'rb', 'websearch': false, 'type': 2}") 
+						
+						form(action="/search", method="get", target="_self", class="navbar-search pull-right")
+							input(type="hidden", name="searchid", 	value="1964789")
+							input(type="hidden", name="l10n", 		value="ru")
+							input(type="hidden", name="reqenc", 	value="")
+							input(type="text", 	 name="text",   	value="", class='search-query navbar-input', placeholder="Поиск")
+						
+						style(type="text/css")
+							.ya-page_js_yes .ya-site-form_inited_no { display: none; }
+
+						script(type="text/javascript")
+							(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;(' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1&&(e.className+=' ya-page_js_yes');s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');
+
+		block content
+		#footer
+			.container
+				p Lifehack Pictures – лайфхаки в картинках на каждый день
+				p мы 
+					a(href="http://vk.com/lifehackpictures") в контакте 
+
+	script(src="https://vk.com/js/api/openapi.js?63")
+	script(src="https://api.filepicker.io/v1/filepicker.js")
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+	
+	script(src="/static/js/bootstrap.min.js")
+	script(src="/static/js/jquery.masonry.js")
+	script(src="/static/js/main.js")
+	
+	script
+		var uvOptions = {};
+		(function() {
+		var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+		uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/nEXOx7EwpGBVwW8O9pgsjw.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+		})();
+

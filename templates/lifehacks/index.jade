@@ -1,0 +1,38 @@
+extends base
+
+block content
+  #jumbotron
+    .hello
+      h1 Lifehack Pictures
+      p.top советы в картинках
+      p.bottom на все случаи жизни
+
+        div(class="randomPictures container")
+          .row
+            each item in lifehacks
+              .span2
+                a(href!='{% url lifehack item.id %}')
+                  img(src=item.thumbnail, class="img-rounded", rel="tooltip", title!="{{item.name}}")
+
+
+        .callToAction
+          a(href="/random", class="btn btn-large btn-danger") 
+            span(class='icon-eye-open icon-white')
+            |  Посмотреть случайный
+          span(style="color: black") &nbsp;или&nbsp;
+          a(class="btn btn-large btn-primary", id="filepickerButton") 
+            span(class='icon-arrow-up icon-white')
+            |  Загрузить свой
+
+  .bs-docs-social
+    div(class='pluso pluso-theme-color pluso-round')
+      a(class='pluso-vkontakte')
+      a(class='pluso-facebook')
+      a(class='pluso-twitter')
+      a(class='pluso-google')
+
+    script(type='text/javascript')
+      if(!window.pluso){pluso={version:'0.9.1',url:'http://share.pluso.ru/'};h=document.getElementsByTagName('head')[0];l=document.createElement('link');l.href=pluso.url+'pluso.css';l.type='text/css';l.rel='stylesheet';s=document.createElement('script');s.src=pluso.url+'pluso.js';s.charset='UTF-8';h.appendChild(l);h.appendChild(s)}
+
+  .marketing
+    h1 Сотни лайфхаков, которые сделают твою жизнь проще.

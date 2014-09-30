@@ -1,0 +1,27 @@
+extends base
+
+block title
+    | Новое |
+
+block content
+    .container
+        .page-header
+            h1 Новые лайфхаки в картинках
+        #images
+            each image in images
+                .wallItem
+                    a(href!='{% url lifehack image.id %}')
+                        div
+                            h5=image.name
+                        img(src=image.thumbnail)
+
+    .ads
+        script 
+            <!--
+            google_ad_client = "ca-pub-3220223657446929";
+            /* ads */
+            google_ad_slot = "9960136443";
+            google_ad_width = 728;
+            google_ad_height = 90;
+            //-->
+        script(type="text/javascript", src="http://pagead2.googlesyndication.com/pagead/show_ads.js")
